@@ -1,0 +1,27 @@
+<form [formGroup]="taskForm" (ngSubmit)="addNewTask()">
+  <div class="form-group">
+    <label for="task">Task</label>
+    <textarea class="form-control" formControlName="task" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="Priorit">Priority</label>
+    <select class="form-control" formControlName="Priority">
+      <option *ngFor="let prio of priorityList">
+        {{prio}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="Status">Status</label>
+    <select class="form-control" formControlName="Status">
+      <option *ngFor="let stats of statusList">
+        {{stats}}
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="assignedBy">Assigned By</label>
+    <input type="text" class="form-control" formControlName="assignedBy">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

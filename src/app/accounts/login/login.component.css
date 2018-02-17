@@ -1,0 +1,9 @@
+.form-signin{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.ng-invalid {
+    border-color: red;
+}
